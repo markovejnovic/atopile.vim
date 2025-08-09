@@ -8,13 +8,12 @@ if exists("b:current_syntax")
   finish
 endif
 
-" Pragma statements (must come before comments)
-syn match atoPragma "#pragma\s\+.*$" contains=atoPragmaKeyword
-syn keyword atoPragmaKeyword pragma contained nextgroup=atoPragmaType skipwhite
-syn match atoPragmaType "\s\+\zs\w\+" contained
+" Pragma statements (higher priority than comments)
+syn match atoPragma "^\s*#pragma\>.*$"
 
-" Comments (assuming Python-style)
-syn match atoComment "#.*$" contains=atoTodo
+" Comments (assuming Python-style) - excluding pragma
+syn match atoComment "^\s*#\(pragma\)\@!.*$" contains=atoTodo
+syn match atoComment "#\s.*$" contains=atoTodo
 syn keyword atoTodo TODO FIXME XXX NOTE contained
 
 " String literals
@@ -64,8 +63,6 @@ syn region atoImport start="^import\s" end="$" contains=atoKeyword,atoString
 
 " Define the default highlighting
 hi def link atoPragma         PreProc
-hi def link atoPragmaKeyword  PreProc
-hi def link atoPragmaType     Type
 hi def link atoComment        Comment
 hi def link atoTodo           Todo
 hi def link atoString         String
