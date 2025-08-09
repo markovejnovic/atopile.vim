@@ -10,7 +10,7 @@ description language.
 ```bash
 mkdir -p ~/.vim/pack/plugins/start
 cd ~/.vim/pack/plugins/start
-git clone https://github.com/yourusername/atopile.vim
+git clone https://github.com/markovejnovic/atopile.vim
 ```
 
 ### Using Packer.nvim (Neovim)
@@ -18,7 +18,7 @@ git clone https://github.com/yourusername/atopile.vim
 Add to your Packer configuration:
 
 ```lua
-use 'yourusername/atopile.vim'
+use 'markovejnovic/atopile.vim'
 ```
 
 Then run `:PackerSync`
@@ -27,7 +27,7 @@ Then run `:PackerSync`
 
 ```bash
 cd ~/.vim/bundle
-git clone https://github.com/yourusername/atopile.vim
+git clone https://github.com/markovejnovic/atopile.vim
 ```
 
 ### Using Vundle
@@ -35,7 +35,7 @@ git clone https://github.com/yourusername/atopile.vim
 Add to your `.vimrc`:
 
 ```vim
-Plugin 'yourusername/atopile.vim'
+Plugin 'markovejnovic/atopile.vim'
 ```
 
 Then run `:PluginInstall`
@@ -45,7 +45,7 @@ Then run `:PluginInstall`
 Add to your `.vimrc`:
 
 ```vim
-Plug 'yourusername/atopile.vim'
+Plug 'markovejnovic/atopile.vim'
 ```
 
 Then run `:PlugInstall`
